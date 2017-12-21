@@ -1,4 +1,13 @@
-# Frontend Proto
+# pwa-proto
+
+WIP
+
+## Stack
+
+* preact-compat
+* react-router
+* react-redux
+* workbox
 
 ## Run
 
