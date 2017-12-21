@@ -8,9 +8,11 @@
     "test": "NODE_ENV=test ava",
     "test:cov": "NODE_ENV=test nyc ava",
     "watch": "webpack-dev-server --hot",
+    "watch:prod": "NODE_ENV=production webpack-dev-server --hot",
     "build:dev": "NODE_ENV=development webpack",
     "build": "NODE_ENV=production webpack",
-    "build:size": "NODE_ENV=production webpack --json | webpack-bundle-size-analyzer"
+    "build:size": "NODE_ENV=production webpack --json | webpack-bundle-size-analyzer",
+    "deploy": "yarn build && netlify deploy -p public"
   },
   "ava": {
     "babel": "inherit",
