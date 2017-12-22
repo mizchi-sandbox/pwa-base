@@ -5,8 +5,7 @@ export const INCREMENT = 'counter/increment'
 
 // Action Creators
 export async function increment(): Promise<{
-  type: typeof INCREMENT,
-  payload: 1
+  type: typeof INCREMENT
 }> {
   return {
     type: INCREMENT
