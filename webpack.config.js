@@ -74,7 +74,7 @@ module.exports = {
     // })
   ].concat(
     ENV === 'production'
-      ? [/* new UglifyJSPlugin({}) */ new CompressionPlugin()]
+      ? [new UglifyJSPlugin({}), new CompressionPlugin()]
       : []
   )
 }

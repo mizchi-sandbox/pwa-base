@@ -1,17 +1,17 @@
 /* @flow */
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'preact-router/match'
 
 export type Props = {}
 
 export default function Header({  }: Props) {
   return (
     <header>
-      <Link to="/">Home</Link>
+      <Link href="/">Home</Link>
       |
-      <Link to="/about">About</Link>
+      <Link href="/about">About</Link>
       |
-      <Link to="/counter">Counter</Link>
+      <Link href="/counter">Counter</Link>
       <hr />
     </header>
   )
