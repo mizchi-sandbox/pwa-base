@@ -64,14 +64,15 @@ module.exports = {
     new htmlPlugin({
       template: 'src/ssr/index.ejs',
       minify: false
+    }),
+    new workboxPlugin({
+      globDirectory: 'public',
+      globPatterns: ['**/*.{html,js,css}'],
+      globIgnores: ['sw.js', 'workbox-sw.prod.*.js'],
+      swDest: path.join('public', 'sw.js'),
+      clientsClaim: true,
+      skipWaiting: true
     })
-    // new workboxPlugin({
-    //   globDirectory: 'public',
-    //   globPatterns: ['**/*.{html,js}'],
-    //   swDest: path.join('public', 'sw.js'),
-    //   clientsClaim: true,
-    //   skipWaiting: true
-    // })
   ].concat(
     ENV === 'production'
       ? [new UglifyJSPlugin({}), new CompressionPlugin()]
