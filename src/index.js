@@ -10,6 +10,8 @@ if (el) {
   ReactDOM.render(<App />, el)
 }
 
+require('preact/devtools')
+
 // if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
 //   window.addEventListener('load', () => {
 //     navigator.serviceWorker
